@@ -101,8 +101,16 @@ public class ROT13  {
     }
 
     public static String rotate(String s, Character c) {
-
-        return "";
+        char [] rotateCharArr = s.toCharArray();
+        CharArrayWriter res = new CharArrayWriter();
+        int rotateIndex = new String(rotateCharArr).indexOf(c);
+        for (int i = rotateIndex; i < s.length(); i++) {
+            res.append(rotateCharArr[i]);
+            }
+        for (int i = 0; i < rotateIndex; i++) {
+            res.append(rotateCharArr[i]);
+        }
+        return res.toString();
     }
 
 }
