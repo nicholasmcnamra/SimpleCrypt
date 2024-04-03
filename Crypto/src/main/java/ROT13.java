@@ -108,7 +108,7 @@ public class ROT13  {
             res.append(sToCharArr[i]);
             }
         for (int i = 0; i < rotateIndex; i++) {
-            res.append(sToCharArr[i]);
+            res.append(s[i]);
         }
         return res.toString();
     }
